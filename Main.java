@@ -4,8 +4,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		ServiciosCliente a=new ServiciosCliente();
-		a.ingresarDatosU("Mayuri", "Velez ", "1751101591");
-		a.generarServicio("Atencion al Cliente");
+		a.ingresarDatosU("Sebastian", "Velez ", "1751694934");
+		a.generarServicio("Compra-Equipo");
 		a.imprimirInformacion();
 		System.out.println("Acerquese al cubiculo: "+a.asignarCubiculo(1));
 		
