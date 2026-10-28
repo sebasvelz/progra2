@@ -1,19 +1,26 @@
-package Servicio;
-
+package daber;
+import java.util.Scanner;
 public class Main {
-
 	public static void main(String[] args) {
-		ServiciosCliente a=new ServiciosCliente();
-		a.ingresarDatosU("Sebastian", "Velez ", "1751694934");
-		a.generarServicio("Compra-Equipo");
-		a.imprimirInformacion();
+		Scanner teclado =new Scanner(System.in); 
+		User a=new User();
+		String Nombre;
+		String Apellido;
+		String Cedula;
+		String Servicio;
+		System.out.println("Ingrese Nombre");
+		Nombre=teclado.nextLine();
+		System.out.println("Ingrese Apellido");
+		Apellido=teclado.nextLine();
+		System.out.println("Ingrese Cedula");
+		Cedula=teclado.nextLine();
+		a.ingresarDatosUser(Nombre,Apellido, Cedula);
+		System.out.println("Ingrese Servicio");
+		Servicio=teclado.nextLine();
+		a.generarServicio(Servicio);
+		a.imprimirInfo();
 		System.out.println("Acerquese al cubiculo: "+a.asignarCubiculo(1));
 		
-		ServiciosCliente b=new ServiciosCliente();
-		b.ingresarDatosU("Mayuri", "Velez ", "1751101591");
-		b.generarServicio("Atencion al Cliente");
-		b.imprimirInformacion();
-		System.out.println("Acerquese al cubiculo: "+a.asignarCubiculo(5));
+		
 	}
-
 }
