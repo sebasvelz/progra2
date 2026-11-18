@@ -1,0 +1,48 @@
+
+package Progra2;
+
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int SumaPares = 0;
+        int SumaImpares = 0;
+
+        int a[] = new int[15];
+        int b[] = new int[7];
+
+        Random random = new Random();
+
+        // Generar los 15 números aleatorios
+        for (int i = 0; i < a.length; i++) {
+
+            a[i] = random.nextInt(1, 11);
+
+            if (a[i] % 2 == 0) {
+                SumaPares = SumaPares + a[i];
+            } else {
+                SumaImpares = SumaImpares + a[i];
+            }
+
+            System.out.println(a[i]);
+        }
+
+        // Calcular el factorial de los primeros 7 números
+        for (int i = 0; i < 7; i++) {
+
+            b[i] = 1;
+
+            for (int j = 1; j <= a[i]; j++) {
+                b[i] = b[i] * j;
+            }
+            System.out.println("Factorial de " + a[i] + " = " + b[i]);
+        }
+
+        // Mostrar las sumas
+        System.out.println("Suma de los pares es: " + SumaPares);
+        System.out.println("Suma de los impares es: " + SumaImpares);
+
+    }
+}
